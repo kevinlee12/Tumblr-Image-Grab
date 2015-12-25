@@ -1,3 +1,12 @@
 #!/bin/bash
 
-python3 ./__pycache__/window.cpython-34.pyc 
+if [ -z $1 ]; then
+  USERNAME=huachenyufan
+else
+  USERNAME=$1
+fi
+
+rm -f canvas.py
+echo "Things are going to happen"
+python3 main.py $USERNAME
+python3 canvas.py
